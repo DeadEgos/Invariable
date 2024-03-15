@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Posts taged as Music">
-    <title>Music Tag | </title>
+    <title>Music Tag | Super cool website name</title>
     <link rel="preload" type="text/css" as="style" href="/assets/app.css">
     <link rel="stylesheet" type="text/css" href="/assets/app.css">
     <script rel="preload" type="text/javascript" src="/assets/app.js" as="script"></script>
@@ -19,7 +19,7 @@
       document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
   </script>
 
-  <body>
+  <body class="flex flex-col min-h-screen">
     <!-- Main Nav -->
     <div class="navbar bg-base-100 z-100">
       <div class="navbar-start">
@@ -29,9 +29,18 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
             </svg>
           </div>
+
           <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
 
 <li><a href='/about.html'>About</a></li>
+
+<li>
+  <a>Blog</a>
+  <ul class="p-2">
+    <li><a href='/blog.html'>Posts</a></li><li><a href='/tags.html'>Tags</a></li>
+  </ul>
+</li>
+
 
 <li><a href='http://google.com'>Some Random link</a></li>
 
@@ -39,7 +48,7 @@
         </div>
         <a href="/" class="-m-1.5 p-1.5">
           <span class="sr-only"></span>
-          <img class="w-20 rounded-full mr-2 inline" src="/assets/images/dog.webp" alt=""><span>Site Name</span>
+          <img class="w-20 rounded-full mr-2 inline" src="/assets/images/dog.webp" alt=""><span>Super cool website name</span>
         </a>
       </div>
 
@@ -47,6 +56,14 @@
         <ul class="menu menu-horizontal px-1 z-10">
 
 <li><a href='/about.html'>About</a></li>
+
+<li class="dropdown dropdown-hover mt-[2px]">
+  <div tabindex="0" role="button" class="btn btn-ghost rounded-btn btn-sm">Blog</div>
+  <ul tabindex="0" class="dropdown-content bg-base-100 p-3 pt-4">
+    <li><a href='/blog.html'>Posts</a></li><li><a href='/tags.html'>Tags</a></li>
+  </ul>
+</li>
+
 
 <li><a href='http://google.com'>Some Random link</a></li>
 
@@ -173,7 +190,8 @@
       </div>
     </div>
 
-    <div class="">
+    <div class="mb-auto">
+      <div class="" class="mb-auto">
 
 
   <!-- Blog section -->
@@ -213,11 +231,11 @@
   <!-- temp button for drawer -->
   
 
+      </div>
     </div>
-
     <footer class="footer footer-center p-10 bg-base-200 text-base-content">
       <aside>
-        <p>© 2024  </p>
+        <p>Super cool website name © 2024  </p>
       </aside>
     </footer>
   </body>
