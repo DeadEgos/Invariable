@@ -1,0 +1,38 @@
+<div class="navbar bg-base-100 z-100">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" id="alb" aria-label="Open navigation menu" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
+      </div>
+
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <%= for sec <- @site_config["navigation_items"] do %>
+          <%= raw(render_sub_or_link_mobile(sec)) %>
+        <% end %>
+      </ul>
+    </div>
+    <a href="/" class="-m-1.5 p-1.5">
+      <span class="sr-only"></span>
+      <img class="w-20 rounded-full mr-2 inline" src="/assets/images/dog.webp" alt="" /><span class="hidden lg:inline"><%= @site_config["site_information"]["title"] %></span>
+    </a>
+  </div>
+
+  <div class="navbar-center flex lg:hidden text-center">
+    <%= @site_config["site_information"]["title"] %>
+  </div>
+
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 z-10">
+      <%= for sec <- @site_config["navigation_items"] do %>
+        <%= raw(render_sub_or_link(sec)) %>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="navbar-end">
+    <.theme_change />
+  </div>
+</div>
