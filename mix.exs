@@ -15,7 +15,9 @@ defmodule StaticSite.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      mod: {StaticSite.Application, []}
+
     ]
   end
 
@@ -24,9 +26,11 @@ defmodule StaticSite.MixProject do
     [
       {:nimble_publisher, "~> 1.1.0"},
       {:phoenix_live_view, "~> 0.20.9"},
-      {:esbuild, "~> 0.8.1"},
-      {:tailwind, "~> 0.2.2"},
-      {:yaml_elixir, "~> 2.9.0"}
+      {:esbuild,"0.8.1"},
+      {:tailwind, "0.2.2"},
+      {:yaml_elixir, "2.9.0"},
+      {:plug_cowboy, "2.7.0"},
+      {:file_system, "1.0.0"}
     ]
   end
 
@@ -35,4 +39,6 @@ defmodule StaticSite.MixProject do
       "site.build": ["build", "tailwind default --minify", "esbuild default --minify"]
     ]
   end
+
+
 end

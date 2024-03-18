@@ -1,6 +1,6 @@
 site_information:
-  title: Super cool website name
-  description: "Some web page description"
+  title: Invariable
+  description: "A static site generator"
   logo: http://some_path.png
 
 navigation_items:
