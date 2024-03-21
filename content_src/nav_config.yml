@@ -1,0 +1,35 @@
+# Navigation Bar Configuration File
+# Order matters, top down -> left to right along the top nav
+# Each item in items requires a label and one of the follow two attributes:
+#  * childre - A list of children
+#  * url - Item is itself a link
+
+items:
+  - label: About
+    children: # No URL specified here since it's just a branch node without a page associated with it
+      - label: Summer Program
+        url: /about/summer.html
+      - label: PROJECTS Program
+        url: /about/projects.html
+      - label: Our History
+        url: /about/history.html
+  - label: Staff
+    children: 
+      - label: 2024 Staff Directory
+        url: /staff/2024_directory.html
+      - label: Board Members
+        url: /staff/board_members.html
+      - label: Staff Members
+        url: /staff/current_staff.html
+  - label: For Campers
+    url: /parents.html # Note url since its the first link only could also be full url to external source
+  - label: Employment
+    url: /employment.html
+  - label: Contact Us
+    url: /contact.html
+  - label: Support
+    children:
+      - label: Donate
+        url: /support/donate.html
+      - label: Fundraser
+        url: /support/fundraise.html

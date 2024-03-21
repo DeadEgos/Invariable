@@ -1,0 +1,12 @@
+slides:
+  - title: "Slide 1 Title"
+    subtitle: "Slide 1 Subtitle"
+    image: "path/to/image1.jpg"
+  - title: "Slide 2 Title"
+    subtitle: "Slide 2 Subtitle"
+    image: "path/to/image2.jpg"
+  - title: "Slide 3 Title"
+    image: "path/to/image3.jpg"
+  - title: "Slide 4 Title"
+    subtitle: "Slide 4 Subtitle"
+    image: "path/to/image4.jpg"
