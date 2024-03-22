@@ -1,14 +1,34 @@
 site_information:
   title: ACAP
-  description: "Autistic Community Activity Program | Education through recreation"
+  description: "Autistic Community Activity Program | Education through recreatio "
   logo: /assets/logo.png
 
 navigation_items:
   - label: About
-    url: /about.html
-  - label: Blog
     children: # No URL specified here since it's just a branch node without a page associated with it
-      - label: Posts
-        url: /blog.html
-      - label: Tags
-        url: /tags.html
+      - label: Summer Program
+        url: /about/summer.html
+      - label: PROJECTS Program
+        url: /about/projects.html
+      - label: Our History
+        url: /about/history.html
+  - label: Staff
+    children: 
+      - label: 2024 Staff Directory
+        url: /staff/2024_directory.html
+      - label: Board Members
+        url: /staff/board_members.html
+      - label: Staff Members
+        url: /staff/current_staff.html
+  - label: For Campers
+    url: /parents.html # Note url since its the first link only could also be full url to external source
+  - label: Employment
+    url: /employment.html
+  - label: Contact Us
+    url: /contact.html
+  - label: Support
+    children:
+      - label: Donate
+        url: /support/donate.html
+      - label: Fundraser
+        url: /support/fundraise.html

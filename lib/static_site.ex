@@ -14,7 +14,7 @@ defmodule StaticSite do
     pages = StaticSite.Pages.all_pages()
     tags = StaticSite.Blog.all_tags()
 
-    [index_html] = StaticSite.Index.content()
+    [index_html] = StaticSite.Index.content() |> dbg()
 
     render_file(
       "index.html",
