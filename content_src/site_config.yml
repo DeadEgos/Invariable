@@ -6,13 +6,11 @@ site_information:
 navigation_items:
   - label: About
     url: /about.html
-  - label: Events
+  - label: Example Events
     url: /events.html
-  - label: Blog
+  - label: Example Blog
     children: # No URL specified here since it's just a branch node without a page associated with it
       - label: Posts
         url: /blog.html
       - label: Tags
         url: /tags.html
-  - label: Some Random link
-    url: http://google.com
