@@ -1,7 +1,6 @@
 defmodule CalendarGenerator do
   def generate_calendar_year(year, events) do
-    1..12
-    |> Enum.map(fn month -> generate_calendar_days(month, year, events) end)
+    Enum.map(1..12, fn month -> generate_calendar_days(month, year, events) end)
   end
 
   defp generate_calendar_days(month, year, events) do
@@ -25,26 +24,14 @@ defmodule CalendarGenerator do
 
   defp set_events(day, events) do
     Enum.filter(events, fn event ->
-      start_date = parse_iso8601_to_date(event.start_datetime)
-      end_date = parse_iso8601_to_date(event.end_datetime)
-      Date.compare(day, start_date) in [:eq, :gt] and Date.compare(day, end_date) in [:eq, :lt]
+      Date.compare(day, event.start_datetime) in [:eq, :gt] and Date.compare(day, event.end_datetime) in [:eq, :lt]
     end)
   end
 
   defp has_event?(day, events) do
     Enum.any?(events, fn event ->
-      start_date = parse_iso8601_to_date(event.start_datetime)
-      end_date = parse_iso8601_to_date(event.end_datetime)
-
-      Date.compare(day, start_date) in [:eq, :gt] and Date.compare(day, end_date) in [:eq, :lt]
+      Date.compare(day, event.start_datetime) in [:eq, :gt] and Date.compare(day, event.end_datetime) in [:eq, :lt]
     end)
-  end
-
-  defp parse_iso8601_to_date(iso8601_string) do
-    case DateTime.from_iso8601(iso8601_string) do
-      {:ok, datetime, _offset} -> DateTime.to_date(datetime)
-      _error -> nil
-    end
   end
 
   def month_number_from_name(name) do
@@ -101,7 +88,6 @@ defmodule CalendarGenerator do
   end
 
   def format_datetime_iso8601(iso8601_string) do
-    {:ok, datetime, 0} = DateTime.from_iso8601(iso8601_string)
-    Calendar.strftime(datetime, "%A, %B %d %Y %I:%M %p")
+    Calendar.strftime(iso8601_string, "%A, %B %d %Y %I:%M %p")
   end
 end

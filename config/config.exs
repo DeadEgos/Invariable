@@ -23,3 +23,5 @@ config :tailwind,
     ),
     cd: Path.expand("../assets", __DIR__)
   ]
+
+import_config "#{config_env()}.exs"

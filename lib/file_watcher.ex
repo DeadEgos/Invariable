@@ -6,7 +6,7 @@ defmodule FileWatcher do
   end
 
   def init(_args) do
-    {:ok, pid} = FileSystem.start_link(dirs: ["/home/josh/Dev/barebones/content_src/"])
+    {:ok, pid} = FileSystem.start_link(dirs: ["..."])
     FileSystem.subscribe(pid)
     {:ok, %{watcher_pid: pid}}
   end

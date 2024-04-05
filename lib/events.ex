@@ -7,6 +7,8 @@ defmodule StaticSite.Events do
     as: :events,
     highlighters: [:makeup_elixir, :makeup_erlang]
 
+  @events Enum.sort_by(@events, & &1.start_datetime, {:asc, DateTime})
+
   # Export the events
   def all_events, do: @events
 end
