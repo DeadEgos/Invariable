@@ -113,13 +113,7 @@
     <ol class="mt-2 divide-y divide-neutral-content text-sm leading-6">
       <%= for event <- @events do %>
         <li class="py-8 sm:flex">
-          <p class="mt-2 flex-auto font-semibold sm:mt-0 text-center sm:text-left mb-8 sm:mb-0">
-            <a href={event.path}>
-              <span class="font-black block text-lg"><%= event.title %></span>
-            </a>
-            <span class="font-thin"><%= event.description %></span>
-          </p>
-          <div class="flex-none sm:m-6">
+          <div class="flex-none m-6 sm:m-0 w-2/6">
             <p class="mb-4">
               <span class="badge badge-success badge-outline mr-2">Starts</span>
               <time class="" datetime={event.start_datetime}>
@@ -133,6 +127,13 @@
               </time>
             </p>
           </div>
+          <p class="mt-2 flex-auto font-semibold sm:mt-0 text-center sm:text-left mb-8 sm:mb-0">
+            <a href={event.path}>
+              <span class="font-black block text-lg"><%= event.title %></span>
+            </a>
+            <span class="font-thin"><%= event.description %></span>
+          </p>
+          
         </li>
       <% end %>
     </ol>
